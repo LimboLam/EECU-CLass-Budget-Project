@@ -1,11 +1,36 @@
+const dropdown = document.getElementById("careerChoices")
+
+let grossMonthIncome = 0;
+
+async function fetchJson(url) {
+    const resp = await fetch(url);
+
+    return resp.json();
+}
+
 async function getCareers() {
-    let response = await fetch('https://eecu-data-server.vercel.app/data');
-    let careers = await response.json();
+    const url = "https://eecu-data-server.vercel.app/data";
+
+    try {
+        const jobs = await fetchJson(url);
+
+        for (let job of jobs){
+            const option = document.createElement("option");
+
+
+            option.innerHTML = `${job.Occupation}: $${job.Salary}`;
+            option.setAttribute(`data-salary`, `${job.Salary}`); //attribute with salary given to option
+            dropdown.appendChild(option);
+
+        }
+
+    } catch (error) {
+        console.log("error", error);
+    }
 }
-// Tried to use fetchAPI to get the careers into an array.
-// Needs ASYNC, don't delete
-function monthly(...items) {
-    const taxes = [document.getElementById(expenseInput1), document.getElementById(expenseInput2), document.getElementById(expenseInput3), document.getElementById(expenseInput4)];
-    
-}
-// Function for calculating Expenses.
+getCareers();
+
+dropdown.addEventListener("input", (option) => { //figure out a way to grab salary from option
+
+
+})

@@ -14,11 +14,13 @@
 
     <h2>Part 1 - Career Salary</h2>
     <ul class="Lists" id="CareerList">
-        <li class="listItem">Select Career <img src="sources/Info.png"><select id="careerChooser"></select></li>
-        <li class="listItem">Monthly Income <img src="sources/Info.png"></li>
+        <li class="listItem">Select Career <img src="sources/Info.png"><select id="careerChoices"></select></li>
+        <li class="listItem" id="monthlyIncome">Monthly Income <img src="sources/Info.png"></li>
         <li class="listItem">Total Monthly Income</li>
     </ul>
-    <!--Drop downs (select) might not be necessary based off how the fetch() attribut works-->
+
+
+    </select>
 
     <h2>Automatic Deduction</h2>
     <ul class="Lists" id="autoDeduction">
@@ -48,9 +50,9 @@
 
     <h2>Part 2 - Expenses</h2>
     <ul class="Lists" id="expensesList">
-    <li>Student Loans <img src="sources/Info.png">$</li>
-    <li>Housing Expenses <img src="sources/Info.png"></li>
-    <li>Essentials<img src="sources/Info.png">$</li>
+    <li>Student Loans <img src="sources/Info.png">$ <input type="text" id="Loans"></li>
+    <li>Housing Expenses <img src="sources/Info.png"> $<input type="text" id="Housing"></li>
+    <li>Essentials<img src="sources/Info.png">$<input type="text" id="Essentials"></li>
     <li>Lifestyle<img src="sources/Info.png">$</li>
     <li>Future-Proofing <img src="sources/Info.png">$</li>
     <li>Total Monthly Expenses <p id="MonthlyExpense">$</p></li>
