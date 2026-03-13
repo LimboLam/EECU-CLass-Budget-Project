@@ -36,3 +36,6 @@ dropdown.addEventListener("input", (option) => { //figure out a way to grab sala
 })
 
 
+/*create monthly budget from annual salary pulled from api fetch */
+
+/* */
