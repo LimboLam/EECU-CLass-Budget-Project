@@ -85,23 +85,15 @@ nav a:hover {
 }
 
 #careerChoices {
-  border: none;
   width: 60vh;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
-.iFoundYouFaker {
-  background-color:#16588E;
-  border-radius: 100%;
-}
 
 .gross {
   background-color:#F0F4F8;
   border: none;
   width: 9vh;
-  margin-left: 130px;
+  margin-left: auto;
 }
 
 footer {
@@ -154,26 +146,26 @@ footer {
   }
  /*Monthly budget header*/
   #title {
-    height: 40px;
     display: flex;
     justify-content: center;
-
-    padding: 100px;
+    padding: 60px;
     font-size: 35px;
+    background-color: white;
+    width: 30vw;
   }
+
   #container {
     padding-left: 2%;
     width: fit-content;
-  
-
-
   }
+
   h2 {
     border: 1px solid var(--brand-color);
     width: fit-content;
     background-color: white;
     margin: 10px;
   }
+
   #buttons {
     display: flex;
     justify-content: center;
@@ -182,6 +174,7 @@ footer {
     gap: 10px;
     margin: 10px;
   }
+
   #buttons button {
     background-color: var(--brand-color);
     color: white;
@@ -192,6 +185,7 @@ footer {
     transition: all 0.3s ease;
     border-radius: 10px;
   }
+
   li img {
     width: 20px;
     height: 20px;

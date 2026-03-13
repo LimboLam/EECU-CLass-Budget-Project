@@ -35,9 +35,4 @@ dropdown.addEventListener("input", (option) => { //figure out a way to grab sala
 
 })
 
-function getMonthlyIncome() {
-    getMonthlyIncome = []
-    getMonthlyIncome = '${job.Salary} / 12'
 
-getMonthlyIncome()
-}
