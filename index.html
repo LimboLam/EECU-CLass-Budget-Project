@@ -25,9 +25,9 @@
             </ul>
         </nav>
     </header>
-
+    <div id="titleCont">
     <h1 id="title">Monthly Budget Calculator</h1>
-
+    </div>
 
 
 <div id = "container">
@@ -35,7 +35,7 @@
     <ul class="Lists" id="CareerList">
         <li class="listItem">Select Career <span class="material-symbols-outlined">help</span>
             <select id="careerChoices"></select></li>
-        <li class="listItem">Gross Monthly Income<input type="text" id="Gross" class="gross" placeholder="$"></li>
+        <li class="listItem">Gross Monthly Income<input type="text" id="gross" class="gross" placeholder="$"></li>
     </ul>
 
 
@@ -45,21 +45,21 @@
         <li class="listItem">
             Medicare:
             <small class="taxInfo">Deduction: 1.45%</small>
-            <p class="calculation"><input id="expenseInput1" placeholder="$"></p>
+            <p class="calculation"><input class="autoDed" placeholder="$"></p>
         </li>
         <li class="listItem">Social Security:
             <small class="taxInfo">Deduction: 6.2%</small>
-            <p class="calculation"><input id="expenseInput2" placeholder="$"></p>
+            <p class="calculation"><input class="autoDed" placeholder="$"></p>
         </li>
         <li class="listItem">Federal Income Tax:
             <small class="taxInfo">Deduction: Varies</small>
-            <p class="calculation"><input id="expenseInput3" placeholder="$"></p>
+            <p class="calculation"><input class="autoDed" placeholder="$"></p>
         </li>
         <li class="listItem">State Tax:
             <small class="taxInfo">Deduction: 4%</small>
-            <p class="calculation"><input id="expenseInput4" placeholder="$"></p>
+            <p class="calculation"><input class="autoDed" placeholder="$"></p>
         </li>
-        <li class="listItem">Total Income(After Tax)</li>
+        <li class="listItem">Total Income(After Tax)<input class="expenseInput" placeholder="$"></li>
         <p class="calculation">
         <p id="outcome"></p>
     </ul>
@@ -69,12 +69,12 @@
 
     <h2>Part 2 - Expenses</h2>
     <ul class="Lists" id="expensesList">
-        <li>Student Loans <img src="sources/betterinfo.png">
-        <li>Housing Expenses <img src="sources/betterinfo.png">
-        <li>Essentials<img src="sources/betterinfo.png">
-        <li>Lifestyle<img src="sources/betterinfo.png">
-        <li>Future-Proofing <img src="sources/betterinfo.png">
-        <li>Total Monthly Expenses <p id="MonthlyExpense">
+        <li class="dropList">Student Loans <span class="material-symbols-outlined">help</span> </span> <span class="material-symbols-outlined">keyboard_arrow_down</span></li>
+        <li class="dropList">Housing Expenses <span class="material-symbols-outlined">help</span> <span class="material-symbols-outlined">keyboard_arrow_down</span></li>
+        <li class="dropList">Essentials <span class="material-symbols-outlined">help</span> <span class="material-symbols-outlined">keyboard_arrow_down</span></li>
+        <li class="dropList">Lifestyle <span class="material-symbols-outlined">help</span> <span class="material-symbols-outlined">keyboard_arrow_down</span></li>
+        <li class="dropList">Future-Proofing <span class="material-symbols-outlined">help</span> <span class="material-symbols-outlined">keyboard_arrow_down</span></li>
+        <li class="dropList">Total Monthly Expenses <input class="expenseInput" placeholder="$"></li>
     </ul>
 </div>
     <!-- buttons -->
@@ -83,13 +83,16 @@
     <button id="Reset">Reset</button>
 </div>
 
+
+
+    <!--Bottom-->
     <footer>
         <nav>
             <ul>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Security Center</a></li>
-                <li><a href="#">How We Pay Your Checking Account Transactions</a></li>
-                <li><a href="#">Site Map</a></li>
+                <li class="linkL"><a href="#">Privacy</a></li>
+                <li class="linkL"><a href="#">Security Center</a></li>
+                <li class="linkL"><a href="#">How We Pay Your Checking Account Transactions</a></li>
+                <li class="linkL"><a href="#">Site Map</a></li>
             </ul>
         </nav>
         <div class="logo">
@@ -97,9 +100,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">Protect Your Home From Foreclosure</a></li>
-                <li><a href="#">Website Accessibility</a></li>
-                <li><a href="#">Careers</a></li>
+                <li class="linkR"><a href="#">Protect Your Home From Foreclosure</a></li>
+                <li class="linkR"><a href="#">Website Accessibility</a></li>
+                <li class="linkR"><a href="#">Careers</a></li>
             </ul>
         </nav>
     </footer>

@@ -16,17 +16,20 @@
     gap: 4px;
 }
 
-.listItem {
+.listItem, .dropList{
   display:flex;
   flex-direction: row;
-  width: 30vw;
+  justify-content: space-between;
+  align-items: center;
+  width: 40vw;
   background-color:white;
+  height: 6vh;
 }
 
-.Info {
-    width: 20px;
-    height: 20px;
-} 
+#careerChoices {
+  width: 20vw;
+  height: 4vh;
+}
 
 body {
   color: var(--text-color);
@@ -70,24 +73,24 @@ nav a:hover {
   color: var(--brand-color-light);
 }
 
-#careerChoices {
-  width: 60vh;
+.gross, .expenseInput, .autoDed {
+  border: none;
+  align-self: center;
+  width: 6vw;
+  height: 3.5vh;
+  margin-left: auto;
+  background-color:#F0F4F8;
 }
 
 
-.gross {
-  background-color:#F0F4F8;
-  border: none;
-  width: 5vw;
-  height: 3vh;
-  margin-left: auto;
+.linkR {
+  text-align: end;
 }
 
 footer {
     background-color: var(--brand-color);
     display: flex;
     color: white;
-    text-align: center;
     padding: 1rem;
     margin-top: 2rem;
     align-items: center;
@@ -130,6 +133,12 @@ footer {
     display: flex;
   }
  /*Monthly budget header*/
+
+
+  #titleCont {
+    justify-self: center;
+  }
+
   #title {
     display: flex;
     justify-content: center;
@@ -161,7 +170,6 @@ footer {
   }
 
   #buttons button {
-    background-color: var(--brand-color);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -171,11 +179,23 @@ footer {
     border-radius: 10px;
   }
 
+  #Results {
+    background-color: var(--brand-color);
+  }
+
+  #Reset {
+    background-color: #727272;
+  }
+
   li img {
     width: 20px;
     height: 20px;
     display: flex;
   }
+
+li {
+   font-size: 20px;
+}
 
 .material-symbols-outlined {
   color: var(--helpIcon);
