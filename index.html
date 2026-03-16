@@ -42,39 +42,86 @@
     </select>
     <h2>Automatic Deduction</h2>
     <ul class="Lists" id="autoDeduction">
-        <li class="listItem">
+        <li class="listItem Med">
             Medicare:
             <small class="taxInfo">Deduction: 1.45%</small>
             <p class="calculation"><input class="autoDed" placeholder="$"></p>
         </li>
-        <li class="listItem">Social Security:
+        <li class="listItem Social">Social Security:
             <small class="taxInfo">Deduction: 6.2%</small>
             <p class="calculation"><input class="autoDed" placeholder="$"></p>
         </li>
-        <li class="listItem">Federal Income Tax:
+        <li class="listItem Fed">Federal Income Tax:
             <small class="taxInfo">Deduction: Varies</small>
             <p class="calculation"><input class="autoDed" placeholder="$"></p>
         </li>
-        <li class="listItem">State Tax:
+        <li class="listItem State">State Tax:
             <small class="taxInfo">Deduction: 4%</small>
             <p class="calculation"><input class="autoDed" placeholder="$"></p>
         </li>
-        <li class="listItem">Total Income(After Tax)<input class="expenseInput" placeholder="$"></li>
-        <p class="calculation">
-        <p id="outcome"></p>
+        <li class="listItem">Total Income (After Tax)<input class="deducTotal" placeholder="$"></li>
     </ul>
+
     <!-- When you do JavaScipt, add something that shows the amount of money calculated (near the $)-->
-
-
 
     <h2>Part 2 - Expenses</h2>
     <ul class="Lists" id="expensesList">
-        <li class="dropList">Student Loans <span class="material-symbols-outlined">help</span> </span> <span class="material-symbols-outlined">keyboard_arrow_down</span></li>
-        <li class="dropList">Housing Expenses <span class="material-symbols-outlined">help</span> <span class="material-symbols-outlined">keyboard_arrow_down</span></li>
-        <li class="dropList">Essentials <span class="material-symbols-outlined">help</span> <span class="material-symbols-outlined">keyboard_arrow_down</span></li>
-        <li class="dropList">Lifestyle <span class="material-symbols-outlined">help</span> <span class="material-symbols-outlined">keyboard_arrow_down</span></li>
-        <li class="dropList">Future-Proofing <span class="material-symbols-outlined">help</span> <span class="material-symbols-outlined">keyboard_arrow_down</span></li>
-        <li class="dropList">Total Monthly Expenses <input class="expenseInput" placeholder="$"></li>
+        <li class="dropList">
+                    Student Loans 
+                    <span class="material-symbols-outlined">help</span>
+                    <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            <div class="content">
+                <p>Tuition and Fees <input class="expenseInput" type="text"></p>
+                <p>Books and Supplies <input class="expenseInput" type="text"></p>
+                <p>Room and Board <input class="expenseInput" type="text"></p>
+            </div>
+        </li>
+        <li class="dropList">
+            Housing Expenses 
+                <span class="material-symbols-outlined">help</span>
+                <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            <div class="content">
+                <p>Mortgage/Rent<input class="expenseInput" type="text"></p>
+                <p>Insurance<input class="expenseInput" type="text"></p>
+                <p>Gas & Electricity<input class="expenseInput" type="text"></p>
+                <p>Water & Sewage<input class="expenseInput" type="text"></p>
+                <p>Home Repairs<input class="expenseInput" type="text"></p>
+            </div>
+        </li>
+        <li class="dropList">
+            
+            Essentials
+                <span class="material-symbols-outlined">help</span>
+                <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            <div class="content">
+                <p>Medical Inusrance<input class="expenseInput" type="text"></p>
+                <p>Dental Insurance<input class="expenseInput" type="text"></p>
+                <p>Groceries<input class="expenseInput" type="text"></p>
+                <p>Transporation<input class="expenseInput" type="text"></p>
+            </div>
+        </li>
+        <li class="dropList">
+            Lifestyle 
+                <span class="material-symbols-outlined">help</span>
+                <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            <div class="content">
+                <p>Gym<input class="expenseInput" type="text"></p>
+                <p>Streaming Services<input class="expenseInput" type="text"></p>
+                <p>Dining out<input class="expenseInput" type="text"></p>
+                <p>Other Subscriptions<input class="expenseInput" type="text"></p>
+            </div>
+        </li>
+        <li class="dropList">
+            Future-Proofing 
+                <span class="material-symbols-outlined">help</span>
+                <span class="material-symbols-outlined arrow">keyboard_arrow_down</span>
+            <div class="content">
+                <p>Savings<input class="expenseInput" type="text"></p>
+                <p>Retirement<input class="expenseInput" type="text"></p>
+                <p>Emergency Fund<input class="expenseInput" type="text"></p>
+            </div>
+        </li>
+        <li class="dlistTotal">Total Monthly Expenses <input class="expenseTotal" placeholder="$"></li>
     </ul>
 </div>
     <!-- buttons -->

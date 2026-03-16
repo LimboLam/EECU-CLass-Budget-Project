@@ -16,14 +16,26 @@
     gap: 4px;
 }
 
-.listItem, .dropList{
+.listItem, .dlistTotal{
   display:flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 40vw;
   background-color:white;
   height: 6vh;
+}
+
+.dropList {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40vw;
+  background-color:white;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
 }
 
 #careerChoices {
@@ -73,12 +85,13 @@ nav a:hover {
   color: var(--brand-color-light);
 }
 
-.gross, .expenseInput, .autoDed {
+.gross, .expenseTotal, .autoDed, .deducTotal{
   border: none;
   align-self: center;
   width: 6vw;
   height: 3.5vh;
   margin-left: auto;
+  margin-right: 7px;
   background-color:#F0F4F8;
 }
 
@@ -154,7 +167,6 @@ footer {
   }
 
   h2 {
-    border: 1px solid var(--brand-color);
     width: fit-content;
     background-color: white;
     margin: 10px;
@@ -200,3 +212,4 @@ li {
 .material-symbols-outlined {
   color: var(--helpIcon);
 }
+

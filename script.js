@@ -1,4 +1,10 @@
 const dropdown = document.getElementById("careerChoices")
+const med = document.getElementsByClassName("Med")
+const social = document.getElementsByClassName("Social")
+const fed = document.getElementsByClassName("Fed")
+const state = document.getElementsByClassName("State")
+const autoded = document.querySelectorAll(".autoDed")
+
 
 let grossMonthIncome = 0;
 
@@ -28,14 +34,37 @@ async function getCareers() {
         console.log("error", error);
     }
 }
-getCareers();
 
-dropdown.addEventListener("input", (option) => { //figure out a way to grab salary from option
+getCareers(); 
 
-
-})
+dropdown.addEventListener("input", (option) => {
+    //the optiuon the user picks (the code previous)
+    const selectedOption = option.target.selectedOptions[0];
+    const salary = selectedOption.getAttribute("data-salary");
+    //subtracts thje salary by 12 
+    grossMonthIncome = Number(salary) / 12;
+    document.getElementById("gross").value = `${grossMonthIncome.toFixed(2)}`;
+});
 
 
 /*create monthly budget from annual salary pulled from api fetch */
 
-/* */
+// All taxes
+function calcTax(grossIncome) {
+    let standDeduc = 16100;
+    const medTax = grossIncome * 0.0145;
+    const socialTax = grossIncome * 0.062;
+    const stateTax = grossIncome * 0.04;
+
+    // find taxable ammount
+    let taxedInc = Math.max(0, grossIncome - standDeduc);
+    let fedTax = 0
+        if (taxedInc <= 12400) {
+            fedTax = taxedInc * 0.10;
+        } else if(taxedInc <= 50400) {
+            fedTax = (12400 * 0.10) + (taxedInc - 12400) * 0.12;
+        } else {
+            fedTax = (12400 * 0.10) + (38000 * 0.12) + (taxedInc -  50400) * 0.22;
+        }
+
+}
