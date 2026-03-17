@@ -81,15 +81,15 @@ function calcTax(grossIncome) {
         } else {
             fedTax = (12400 * 0.10) + (38000 * 0.12) + (taxedInc -  50400) * 0.22;
         }
+        
 
     fedElm.value = (fedTax / 12).toFixed(2) 
     
-    let totDec = (medElm + socialElm + stateElm + fedTax);
-    document.getElementById("totAf").value = totDec.toFixed(2);
+    const totAf = document.getElementById("totAf");
+    const totTax = medTax + socialTax + stateTax + (fedTax / 12);
+    const aftaxInc = grossMonthIncome - totTax;
+    totAf.value = aftaxInc.toFixed(2);
+
 }
 
-
-
-
-  
 
