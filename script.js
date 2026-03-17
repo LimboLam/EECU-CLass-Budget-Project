@@ -103,6 +103,10 @@ function totalExpenses() {
     expenseInputs.forEach(input => {
         total += parseFloat(input.value) || 0;
     });
+
+    // Keep the student loan total updated (sum of all inputs with id="studentloanInput")
+    updateStudentLoanTotal();
+
     // set expenseTotal to total
     document.querySelector(".expenseTotal").value = total.toFixed(2);
 }
@@ -116,21 +120,35 @@ for (let input of expenseInputs) {
 
 /* chart */
 
-const studentloanInputs = document.getElementById("studentloanInput");
+// NOTE: HTML uses the same id for multiple student loan inputs. QuerySelectorAll still works.
+const studentloanInputs = document.querySelectorAll("#studentloanInput");
+let studentLoanTotal = 0;
+
+function updateStudentLoanTotal() {
+    studentLoanTotal = Array.from(studentloanInputs).reduce((sum, input) => sum + (parseFloat(input.value) || 0), 0);
+
+    if (typeof myChart !== "undefined" && myChart?.data?.datasets?.[0]) {
+        myChart.data.datasets[0].data[0] = studentLoanTotal;    
+        myChart.update();
+    }
+
+    return studentLoanTotal;
+}
+
 const housingInputs = document.getElementById("housingInput");
 const essentialsInputs = document.getElementById("essentialsInput");
 const lifestyleInputs = document.getElementById("lifestyleInput");
 const futureproofingInputs = document.getElementById("futureproofingInput");
 
-const ctx = document.getElementById('myChart');
+const ctx = document.getElementById('myChart').getContext('2d');
 
-new Chart(ctx, {
+const myChart = new Chart(ctx, {
     type: 'pie',
     data: {
         labels: ['Student Loans', 'Housing', 'Essentials', 'Lifestyle', 'Future-Proofing'],
         datasets: [{
             label: '$',
-            data: [8,
+            data: [studentLoanTotal,
                    6,
                    3,
                    5,
