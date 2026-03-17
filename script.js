@@ -92,4 +92,24 @@ function calcTax(grossIncome) {
 
 }
 
+/* Adding expenseInputs and putting the total in expenseTotal */
 
+// function to add inputs together
+function totalExpenses() {
+    // get all inputs with class expenseInput
+    const expenseInputs = document.querySelectorAll(".expenseInput");
+    let total = 0;
+    // for each input, add value to total, and if thwere is no value add 0
+    expenseInputs.forEach(input => {
+        total += parseFloat(input.value) || 0;
+    });
+    // set expenseTotal to total
+    document.querySelector(".expenseTotal").value = total.toFixed(2);
+}
+
+// add event listener to all inputs with class expenseInput
+const expenseInputs = document.querySelectorAll(".expenseInput");
+
+for (let input of expenseInputs) {
+    input.addEventListener("input", totalExpenses);
+}
