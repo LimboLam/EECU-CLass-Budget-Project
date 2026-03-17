@@ -113,3 +113,36 @@ const expenseInputs = document.querySelectorAll(".expenseInput");
 for (let input of expenseInputs) {
     input.addEventListener("input", totalExpenses);
 }
+
+/* chart */
+
+const studentloanInputs = document.getElementById("studentloanInput");
+const housingInputs = document.getElementById("housingInput");
+const essentialsInputs = document.getElementById("essentialsInput");
+const lifestyleInputs = document.getElementById("lifestyleInput");
+const futureproofingInputs = document.getElementById("futureproofingInput");
+
+const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Student Loans', 'Housing', 'Essentials', 'Lifestyle', 'Future-Proofing'],
+        datasets: [{
+            label: '$',
+            data: [8,
+                   6,
+                   3,
+                   5,
+                   2],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
